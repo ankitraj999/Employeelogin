@@ -1,0 +1,23 @@
+<div class="well">
+  <button class="btn btn-success" (click)="click()">hello</button>
+  <p>{{result}}</p>
+  <button class="btn btn-danger" (click)="add(10)">add</button>
+  <button class="btn btn-primary" (click)="del(40,'ankit')">delete</button>
+  <hr>
+  <div class="well">
+    <h1 class="page-header">Names</h1>
+    <div class="well">
+      Enter Name : <input #name type=text />
+      <button class="btn btn-primary" (click)="addItem(name.value)">addName</button>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor='let item of empAray;let i=index'>{{item}}<span class="badge">
+          {{i+1}}
+          <button (click)=delItem(item)>X</button></span>
+        </li>
+    </ul>
+
+  </div>
+
+
+</div>

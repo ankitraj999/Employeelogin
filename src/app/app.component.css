@@ -1,0 +1,16 @@
+td{
+    border:1px solid red;
+}
+table{
+    font-size: large;
+    background-color: yellow;
+}
+app-chil-component{
+    color:blue;
+    font-weight: bold;
+    background-color: yellow;
+}
+p{
+    background-color: greenyellow;
+    color:red;
+}

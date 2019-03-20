@@ -1,0 +1,49 @@
+<p><b>
+    assignment-1 works!
+  </b>
+</p>
+
+<p *ngFor="let item of subject; let i=index">
+  {{i}}-{{item}}
+</p>
+<br>
+<p><b>assignment-2 works!</b></p>
+<p *ngIf="showFaculty then hello else block">
+</p>
+<ng-template #hello>hello: {{Faculty}}</ng-template>
+<ng-template #block>False:Not working bro!</ng-template>
+<hr>
+<p><b>assignment-3 works!</b></p>
+<p>duration:
+  <span [ngSwitch]="Duration">
+    <span *ngSwitchCase="1">one Day</span><br>
+    <span *ngSwitchCase="30">one Week</span><br>
+    <span *ngSwitchCase="30">one Month</span><br>
+    <span *ngSwitchDefault>please check the value</span><br>
+
+  </span>
+</p>
+<p><b>assignment-4 works!</b></p>
+<p>
+  {{pro.id}}
+  {{pro.name}}
+  {{pro.gender}}
+  {{pro.salary}}
+  {{pro.category}}
+</p>
+<table border="2" align="center">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Salary</th>
+    <th>Category</th>
+  </tr>
+  <tr *ngFor="let item of proArray">
+    <td>{{item.id}}</td>
+    <td>{{item.name| genderFilter:item.gender }}</td>
+    <td>{{item.gender }}</td>
+    <td>{{item.salary | currency:'INR':true:'1.3-3'}}</td>
+    <td>{{item.category}}</td>
+  </tr>
+</table>
+<hr>
